@@ -1,0 +1,76 @@
+{% load static %}
+<html>
+    <style>
+        #view{
+            width: 1500px;
+            height: 715px;
+            background-color:rgb(186, 156, 120) ;
+        }
+        .right{
+            width: 500px;
+            background-color: rgb(186, 156, 120);
+            float:right;
+        }
+        .center{
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            width:80%;
+            height:90%;
+        }
+        .container {
+            position: relative;
+            text-align:center;
+        }
+        .centered {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .top{
+            position: absolute;
+            top: 40px;
+            left: 450px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <div id="view" class="container">
+            <img style="opacity: 0.5;" src="{% static 'bookl.jpg' %}" width="900px" height="500px" class="center">
+            <div class="right">
+                <center><p><a href="signup"><button style="background-color: lightgray;"><b>New account?&nbsp;Sign Up</b></button></a></p></center>
+                <center><p><a href="delete"><button style="background-color: lightgray;"><b>Delete account</b></button></a></p></center>
+            </div>
+            <div class="top" style="font-size: 80;">
+                <table>
+                    <tr>
+                        <td><center><a href="home">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                        <td><center><a href="about">About &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                        <td><center><a href="categories">Categories &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                        <td><center><a href="best">Best selling &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                        <td><center><a href="author">Authors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                        <td><center><a href="shop">Shop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                        <td><center><a href="contact">Contact Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                        <td><center><a href="admin">Admin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                    </tr>
+                </table>
+            </div>
+            <form action="log" class="centered">
+                <center><h2><b>Login</b></h2></center><br>
+                <label><b>Username</b></label>
+                <input style="background-color: rgb(244, 242, 224);" type="text" placeholder="User ID" name="ud" required><br><br>
+                <label><b>Password</b></label>
+                <input style="background-color: rgb(244, 242, 224);" type="password" placeholder="password" name="pwd" required><br><br>
+                <label><b>Re-enter password</b></label>
+                <input style="background-color: rgb(244, 242, 224);" type="password" placeholder="password" name="rpwd" required>
+                <br><br>
+                <center><button style="background-color: lightgray;"><b>Login</b></button></center>
+            </form>
+        </div>
+    </body>
+</html>

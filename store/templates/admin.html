@@ -1,0 +1,65 @@
+<html>
+    <style>
+        #head{
+        width:auto;
+        height:90px;
+        background-color: rgb(249, 232, 218);
+        }
+        .right{
+            width: 500px;
+            background-color: rgb(249, 232, 218);
+            float:right;
+        }
+        .left{
+            width: 1400px;
+            background-color: rgb(249, 232, 218);
+            float:left;
+        }
+        a{
+            text-decoration: none;
+        }
+        .margin{
+            left: 30px;
+        }
+        .size{
+            width: 500px;
+            height: 200px;
+        }
+        .igsize{
+            width: 500px;
+            height: 200px;
+            float: right;
+        }
+    </style>
+    <body>
+        <div id="head">
+            <br>
+            <div class="right">
+                <center><a href="login"><button>Create new account/Login</button></a></center>
+            </div>
+            <div class="left">
+                <center>
+                    <table>
+                        <tr>
+                            <td><center><a href="home">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                            <td><center><a href="about">About &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                            <td><center><a href="categories">Categories &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                            <td><center><a href="best">Best selling &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                            <td><center><a href="author">Authors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                            <td><center><a href="shop">Shop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                            <td><center><a href="contact">Contact Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                            <td><center><a href="admin">Admin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></center></td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </div>
+        <center><h3 style="font-size: 30;">Customers data</h3></center>
+        <h3 style="margin-left: 35px;">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mode of payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date of purchase</h3>
+        {% for i in t%}
+        <table style="align-items: center; margin-left: 40px;">
+            <tr><td>{{i.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>{{i.email}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>{{i.phone}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>{{i.mode}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>{{i.date}}</td></tr>
+        </table>
+        {% endfor %}
+    </body>
+</html>
